@@ -953,7 +953,8 @@ def matches_word_groups(
     if not word_groups:
         return True
 
-    title_lower = title.lower()
+    title_lower = str(title).lower()
+
 
     # 过滤词检查
     if any(filter_word.lower() in title_lower for filter_word in filter_words):
